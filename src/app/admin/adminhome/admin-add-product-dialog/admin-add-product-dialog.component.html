@@ -1,0 +1,31 @@
+<div class="mat-mdc-dialog-surface.mdc-dialog__surface">
+  <h2 class="mat-mdc-dialog-title">Add Product</h2>
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <div class="form-control">
+      <label for="name">Product Name:</label>
+      <input id="name" formControlName="name" type="text">
+    </div>
+    <div class="form-control">
+      <label for="price">Price:</label>
+      <input id="price" formControlName="price" type="number">
+    </div>
+    <div class="form-control">
+      <label for="description">Description:</label>
+      <textarea id="description" formControlName="description"></textarea>
+    </div>
+    <div class="form-control">
+      <label for="category">Category:</label>
+      <select id="category" formControlName="category">
+        <option value="cellphone">Cellphone</option>
+        <option value="laptop">Laptop</option>
+        <option value="accessories">Accessories</option>
+        <!-- Add more categories as needed -->
+      </select>
+    </div>
+    <div class="form-control">
+      <label for="image">Image:</label>
+      <input id="image" type="file" (change)="onFileSelected($event)">
+    </div>
+    <button type="submit">Add Product</button>
+  </form>
+</div>

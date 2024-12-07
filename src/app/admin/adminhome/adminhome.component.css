@@ -1,0 +1,101 @@
+/* Existing navbar styles */
+.navbar {
+    background-color: #C21E56;
+    color: #fff;
+    padding: 10px;
+}
+
+.navbar .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+    font-size: 30px;
+}
+
+.navbar-brand:hover {
+    color: #fff;
+}
+
+.navbar-brand:hover::after {
+    width: 100%;
+    left: 0;
+    background-color: #fff;
+}
+
+.nav-link {
+    color: #fff;
+    margin-left: 15px;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #fff;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #fff;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+    background-color: #fff;
+}
+
+.dropdown-menu {
+    background-color: #C21E56;
+    color: #fff;
+}
+
+.dropdown-item {
+    color: #fff;
+}
+
+.dropdown-item:hover {
+    background-color: #a61d4f;
+}
+
+/* New styles for icon sizes */
+.nav-link .bi-cart,
+.nav-link .bi-person-circle {
+    font-size: 1.5em; /* Change this value to adjust the size */
+}
+
+.nav-link .bi-cart {
+    font-size: 1.5em; /* Adjust this value to change the size of the cart icon */
+}
+
+.nav-link .bi-person-circle {
+    font-size: 1.5em; /* Adjust this value to change the size of the person icon */
+}
+
+/* Custom styles to remove the white part (caret) */
+.nav-item.dropdown .nav-link.dropdown-toggle::after {
+    display: none; /* Remove the caret */
+}
+
+/* Style for the button inside the navbar */
+.btn-success {
+    font-size: 1em; /* Adjust size if needed */
+}
+
+
+

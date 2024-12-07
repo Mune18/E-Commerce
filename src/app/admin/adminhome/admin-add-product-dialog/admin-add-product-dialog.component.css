@@ -1,0 +1,74 @@
+
+
+.mat-mdc-dialog-surface.mdc-dialog__surface {
+    width: 200% !important; /* Adjust width as needed */
+    max-width: 600px !important; /* Adjust max-width as needed */
+    margin: 0 auto !important; /* Center the dialog horizontally */
+    padding: 20px !important;
+    background-color: #fff !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+    overflow-y: auto !important; /* Ensure scroll if content overflows */
+    position: relative; /* Ensure relative positioning */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust to keep the element centered */
+  }
+  
+  /* Styling for the dialog header */
+  .mat-mdc-dialog-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for the form */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Styling for form controls */
+  .form-control {
+    margin-bottom: 15px;
+  }
+  
+  .form-control label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .form-control input,
+  .form-control textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  /* Styling for the textarea specifically */
+  .form-control textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  /* Styling for the submit button */
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Optional: Add some margin for the form */
+  .form-container {
+    margin-top: 20px;
+  }
+  

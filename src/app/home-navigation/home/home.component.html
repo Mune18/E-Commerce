@@ -1,0 +1,28 @@
+<app-home-navigation (search)="onSearch($event)"></app-home-navigation>
+<div class="container mt-4">
+  <ul class="nav nav-tabs">
+    <li class="nav-item" (click)="filterByCategory('all')">
+      <a class="nav-link" [class.active]="selectedCategory === 'all'">All</a>
+    </li>
+    <li class="nav-item" (click)="filterByCategory('laptop')">
+      <a class="nav-link" [class.active]="selectedCategory === 'laptop'">Laptops</a>
+    </li>
+    <li class="nav-item" (click)="filterByCategory('cellphone')">
+      <a class="nav-link" [class.active]="selectedCategory === 'cellphone'">Cellphones</a>
+    </li>
+    <li class="nav-item" (click)="filterByCategory('accessories')">
+      <a class="nav-link" [class.active]="selectedCategory === 'accessories'">Accessories</a>
+    </li>
+  </ul>
+
+  <div class="card-container">
+    <div class="card" *ngFor="let product of filteredProducts">
+      <img [src]="'assets/uploaded_images/' + product.image" class="card-img-top" alt="{{ product.name }}">
+      <div class="card-body">
+        <h5 class="card-title">{{ product.name }}</h5>
+        <p class="card-text">{{ product.description }}</p>
+        <p class="product-price">Price: {{ product.price | currency:'PHP':'symbol':'1.2-2' }}</p>
+      </div>
+    </div>
+  </div>
+</div>

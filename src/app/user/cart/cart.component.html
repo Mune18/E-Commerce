@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/userhome">TechHub | Shopping Cart</a>
+
+  </div>
+</nav>
+
+  <div *ngIf="cartItems.length > 0; else noItems" class="cart-container">
+    <div *ngFor="let item of cartItems" class="cart-item">
+      <button class="remove-btn" (click)="removeFromCart(item.productId)">
+        <i class="fas fa-trash-alt"></i>
+      </button>
+      <label class="custom-checkbox">
+        <input type="checkbox" [(ngModel)]="item.selected" (change)="updateTotalPrice()" />
+        <span class="checkmark"></span>
+      </label>
+      <img [src]="'./assets/uploaded_images/' + item.image" alt="{{ item.productName }}" class="product-image" />
+      <div class="product-details">
+        <h3>{{ item.productName }}</h3>
+        <p>{{ item.description }}</p>
+        <p class="product-price">Price: {{ item.price | currency:'PHP':'symbol':'1.2-2' }}</p>
+        <div class="price-info">
+          <div class="quantity-control">
+            <button (click)="changeQuantity(item.productId, item.quantity - 1)" class="quantity-btn">-</button>
+            <span>{{ item.quantity }}</span>
+            <button (click)="changeQuantity(item.productId, item.quantity + 1)" class="quantity-btn">+</button>
+          </div>
+          <p class="total-price">Total Price: {{ calculateTotalPrice(item.price, item.quantity) | currency:'PHP':'symbol':'1.2-2' }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <p class="footer-total">Total Price: {{ selectedTotalPrice | currency:'PHP':'symbol':'1.2-2' }}</p>
+      <button class="order-now-btn" (click)="orderNow()">Order Now</button>
+    </div>
+  </div>
+
+  <ng-template #noItems>
+    <p class="empty-cart-message">Your cart is empty.</p>
+  </ng-template>
+
+  

@@ -1,0 +1,149 @@
+/* Style for the dialog container */
+.mat-dialog-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 1px solid #ddd; /* Reduced border thickness */
+}
+
+/* Title of the dialog */
+.modal-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #c21e56;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+/* Content area of the dialog */
+.modal-body {
+    padding: 10px;
+    overflow-y: auto;
+    max-height: 400px; /* Adjust based on your design */
+}
+
+/* List items in the dialog */
+.list-unstyled {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.list-unstyled li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 10px;
+    border: 1px solid #ddd; /* Reduced border thickness */
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.list-unstyled li:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Image styling */
+.product-image {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Item details */
+.product-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.price-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    color: #555;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quantity-btn {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.quantity-btn:hover {
+    background-color: #ddd;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.total-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #c21e56;
+  margin: 100px;
+}
+
+/* Actions area of the dialog */
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: #c21e56;
+    border: none;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #a61d4f;
+    transform: scale(1.05);
+}
+
+.btn-outline-secondary {
+    border: 2px solid #c21e56; 
+    color: #c21e56; 
+    transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+    color: #fff; 
+    background-color: #c21e56; 
+    border-color: #c21e56;
+}
